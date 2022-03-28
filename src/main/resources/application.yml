@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/my-work-space
+    username: postgres
+    password: postgres
+  main:
+    allow-circular-references: true
+  
