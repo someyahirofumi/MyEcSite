@@ -14,7 +14,7 @@ $(function() {
 		calc_price();
 	});
 
-	$(".toppingCount").on("change", function() {
+	$(".checkbox-inline").on("change", function() {
 
 		calc_price();
 	});
@@ -31,15 +31,15 @@ $(function() {
 	function calc_price() {
 		let size = $(".size:checked").val();
 		
-		let topping_count = $("#topping input:checkbox:checked").length;
+		let topping_count = $('.checkbox-inline input:checkbox:checked').length;
 		let quantity = $("#quantity").val();
 		let size_price = 0;
 		let topping_price = 0;
 		if (size === "M") {
-			size_price = $("#priceM").val();
+			size_price = parseInt($("#priceM").val());
 			topping_price = 200 * topping_count;
 		} else {
-			size_price = $("#priceL").val();
+			size_price = parseInt($("#priceL").val());
 			topping_price = 300 * topping_count;
 		}
 		let price = (size_price + topping_price) * quantity;

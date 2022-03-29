@@ -75,7 +75,7 @@
               <div class="panel-title">商品を検索する</div>
             </div>
             <div class="panel-body">
-              <form method="post" th:action="@{/toItemList}" class="form-horizontal">
+              <form method="post" th:action="@{/user/search}" class="form-horizontal">
                 <div class="form-group">
                   <label for="code" class="control-label col-sm-2"
                     >商品名</label
@@ -104,7 +104,7 @@
       </div>
       
       <!--並び順の表示-->
-		<form th:action="@{/user/toItemList}" method="POST">
+		<form th:action="@{/user/search}" method="POST">
 			<div id="select_menu">
 				<select id="listBox" name="listBox">
 					<option value="none">---</option>
